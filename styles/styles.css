@@ -43,18 +43,18 @@ nav {
     align-items: center;
 }
 
-nav .logo {
+.logo {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-nav .logo img {
+.logo img {
     width: 86.041px;
     height: 40px
 }
 
-nav .logo h2 {
+.logo h2 {
     font-size: 2.8rem;
     font-weight: 700;
     margin: 0px;
@@ -265,24 +265,85 @@ nav li img {
     gap: 20px;
     border: none;
 }
-.games-box:hover{
+
+.games-box:hover {
     cursor: pointer;
 }
-.row-one{
+
+.row-one {
     display: flex;
     justify-content: center;
     gap: 20px;
 
 }
-.row-two{
+
+.row-two {
     display: flex;
     justify-content: center;
     gap: 20px;
 }
-.games-box h3{
+
+.games-box h3 {
     font-size: 1.25rem;
     font-weight: 600;
     color: #0B0223;
+}
+
+/* footer styles */
+footer {
+    background: #0B0223;
+    padding: 120px 500px;
+}
+
+.footer-links,
+.footer-img,
+.policy-section {
+    margin-top: 50px;
+}
+
+.footer-links ul,
+.policy-section ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: #FFF;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.footer .logo {
+    justify-content: center;
+}
+
+.footer .logo h2 {
+    color: #FFF;
+}
+
+.footer-img {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.footer-img img {
+    width: 40px;
+}
+
+.policy-section ul a,
+.footer h6 {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.60);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.footer h6 {
+    text-align: center;
 }
 
 @media screen and (max-width: 426px) {
@@ -315,8 +376,8 @@ nav li img {
     .banner,
     .we-are-gamers,
     .box-container,
-    .games-box-container{
-        padding: 0px;
+    .games-box-container {
+        padding: 100px 0px;
     }
 
     .box-container,
@@ -349,4 +410,40 @@ nav li img {
         position: initial;
         margin-bottom: 50px;
     }
+
+    .games-box-container>* {
+        flex: 1;
+    }
+
+    .footer-links ul,
+    .footer-img {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .policy-section ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .footer-img {
+        padding-left: 45px;
+    }
+
+    .footer-links ul,
+    .policy-section ul {
+        text-align: center;
+        padding-left: 0px;
+        margin: 40px 20px;
+    }
+
+    footer {
+        padding: 75px 20px;
+        gap: 45px;
+    }
+
 }
